@@ -10,7 +10,7 @@ class ObsCli < Formula
   license "MIT"
 
   url "https://github.com/cdavis-code/obs_websocket_workspace/archive/refs/tags/v5.7.0+1.tar.gz"
-  sha256 "REPLACE_WITH_SHA256"
+  sha256 "088ff896b29b492251f1a470c295b05ea3ba7d5d6cccc265874e673fe5237237"
 
   # Development / HEAD install: brew install --head obs-cli
   head "https://github.com/cdavis-code/obs_websocket_workspace.git", branch: "main"
