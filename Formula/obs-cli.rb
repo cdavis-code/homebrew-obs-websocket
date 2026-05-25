@@ -6,11 +6,11 @@
 class ObsCli < Formula
   desc "CLI tool for controlling OBS Studio via the obs-websocket v5.x protocol"
   homepage "https://github.com/cdavis-code/obs_websocket_workspace"
-  version "5.7.1+3"
+  version "5.7.0+2"
   license "MIT"
 
-  url "https://github.com/cdavis-code/obs_websocket_workspace/archive/refs/tags/v5.7.1+3.tar.gz"
-  sha256 "3a98c876628169633b7a1857ad499cf4ebab360b8b6cbce6c4845d84d95738db"
+  url "https://github.com/cdavis-code/obs_websocket_workspace/archive/refs/tags/v5.7.0+2.tar.gz"
+  sha256 "38bd74eeb3aad8d097e1fb04812c4a7069265d45c4e384da85f538dd62d2e40a"
 
   # Development / HEAD install: brew install --head obs-cli
   head "https://github.com/cdavis-code/obs_websocket_workspace.git", branch: "main"
