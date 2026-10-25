@@ -6,7 +6,7 @@
 class ObsCli < Formula
   desc "CLI tool for controlling OBS Studio via the obs-websocket v5.x protocol"
   homepage "https://github.com/cdavis-code/obs_websocket_workspace"
-  version "5.7.0+2"
+  version "5.7.3"
   license "MIT"
 
   url "https://github.com/cdavis-code/obs_websocket_workspace/archive/refs/tags/v5.7.0+2.tar.gz"
