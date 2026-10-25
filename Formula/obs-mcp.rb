@@ -1,1 +1,42 @@
-IyB0eXBlZDogZmFsc2UKIyBmcm96ZW5fc3RyaW5nX2xpdGVyYWw6IHRydWUKCiMgSG9tZWJyZXcgZm9ybXVsYSBmb3Igb2JzLW1jcAojIEluc3RhbGwgd2l0aDogYnJldyB0YXAgY2RhdmlzLWNvZGUvb2JzLXdlYnNvY2tldCAmJiBicmV3IGluc3RhbGwgb2JzLW1jcApjbGFzcyBPYnNNY3AgPCBGb3JtdWxhCiAgZGVzYyAiTUNQIHNlcnZlciBmb3IgY29udHJvbGxpbmcgT0JTIFN0dWRpbyB2aWEgdGhlIG9icy13ZWJzb2NrZXQgdjUueCBwcm90b2NvbCIKICBob21lcGFnZSAiaHR0cHM6Ly9naXRodWIuY29tL2NkYXZpcy1jb2RlL29ic193ZWJzb2NrZXRfd29ya3NwYWNlIgogIHZlcnNpb24gIjUuNy4xKzQiCiAgbGljZW5zZSAiTUlUIgoKICBvbl9tYWNvcyBkbwogICAgaWYgSGFyZHdhcmU6OkNQVS5hcm0/CiAgICAgIHVybCAiaHR0cHM6Ly9naXRodWIuY29tL2NkYXZpcy1jb2RlL29ic193ZWJzb2NrZXRfd29ya3NwYWNlL3JlbGVhc2VzL2Rvd25sb2FkL3Yje3ZlcnNpb259L29icy1tY3AtZGFyd2luLWFybTY0IgogICAgICBzaGEyNTYgIkFSTTY0X01BQ09TX1NIQTI1NiIKICAgIGVsc2UKICAgICAgdXJsICJodHRwczovL2dpdGh1Yi5jb20vY2RhdmlzLWNvZGUvb2JzX3dlYnNvY2tldF93b3Jrc3BhY2UvcmVsZWFzZXMvZG93bmxvYWQvdiN7dmVyc2lvbn0vb2JzLW1jcC1kYXJ3aW4tYW1kNjQiCiAgICAgIHNoYTI1NiAiQU1ENjRfTUFDT1NfU0hBMjU2IgogICAgZW5kCiAgZW5kCgogIG9uX2xpbnV4IGRvCiAgICBpZiBIYXJkd2FyZTo6Q1BVLmFybT8KICAgICAgdXJsICJodHRwczovL2dpdGh1Yi5jb20vY2RhdmlzLWNvZGUvb2JzX3dlYnNvY2tldF93b3Jrc3BhY2UvcmVsZWFzZXMvZG93bmxvYWQvdiN7dmVyc2lvbn0vb2JzLW1jcC1saW51eC1hcm02NCIKICAgICAgc2hhMjU2ICJBUk02NF9MSU5VWF9TSEEyNTYiCiAgICBlbHNlCiAgICAgIHVybCAiaHR0cHM6Ly9naXRodWIuY29tL2NkYXZpcy1jb2RlL29ic193ZWJzb2NrZXRfd29ya3NwYWNlL3JlbGVhc2VzL2Rvd25sb2FkL3Yje3ZlcnNpb259L29icy1tY3AtbGludXgtYW1kNjQiCiAgICAgIHNoYTI1NiAiQU1ENjRfTElOVVhfU0hBMjU2IgogICAgZW5kCiAgZW5kCgogICMgRGV2ZWxvcG1lbnQgLyBIRUFEIGluc3RhbGw6IGJyZXcgaW5zdGFsbCAtLWhlYWQgb2JzLW1jcAogIGhlYWQgImh0dHBzOi8vZ2l0aHViLmNvbS9jZGF2aXMtY29kZS9vYnNfd2Vic29ja2V0X3dvcmtzcGFjZS5naXQiLCBicmFuY2g6ICJtYWluIgoKICBkZWYgaW5zdGFsbAogICAgYmluLmluc3RhbGwgRGlyWyIqIl0uZmlyc3QgPT4gIm9icy1tY3AiCiAgZW5kCgogIHRlc3QgZG8KICAgIGFzc2VydF9tYXRjaCAidXNhZ2UiLCBzaGVsbF9vdXRwdXQoIiN7YmlufS9vYnMtbWNwIC0taGVscCAyPiYxIHx8IHRydWUiKQogIGVuZAplbmQK
+# typed: false
+# frozen_string_literal: true
+
+# Homebrew formula for obs-mcp
+# Install with: brew tap cdavis-code/obs-websocket && brew install obs-mcp
+class ObsMcp < Formula
+  desc "MCP server for controlling OBS Studio via the obs-websocket v5.x protocol"
+  homepage "https://github.com/cdavis-code/obs_websocket_workspace"
+  version "5.7.2+2"
+  license "MIT"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-darwin-arm64"
+      sha256 "c179e03f5612e03ea6e2bf00c6ce9768a1d39c23b0ea0be470c3e4f0a1d01f2d"
+    else
+      url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-darwin-amd64"
+      sha256 "15cc40200bad8e8901438affa8e69a29a36e1a27a1ba5a8684c02abfd3db20ab"
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm?
+      url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-linux-arm64"
+      sha256 "4fd11c093c8750864dde9f8d7ae9f7edaf2668713f1af4ab4fe6af06e93118fa"
+    else
+      url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-linux-amd64"
+      sha256 "0975b2e7a8fb763a5fc1c3a53f2538172a1c642ff35201aeee537de9bc141c29"
+    end
+  end
+
+  # Development / HEAD install: brew install --head obs-mcp
+  head "https://github.com/cdavis-code/obs_websocket_workspace.git", branch: "main"
+
+  def install
+    bin.install Dir["*"].first => "obs-mcp"
+  end
+
+  test do
+    assert_match "usage", shell_output("#{bin}/obs-mcp --help 2>&1 || true")
+  end
+end
