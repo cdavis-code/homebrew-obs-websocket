@@ -12,10 +12,10 @@ class ObsCli < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-cli-darwin-arm64"
-      sha256 "e142affbb5bef8290bec017c6e032197b3fe5120d15916d7cb5e64e175c044bc"
+      sha256 "4e62657a10ef96fc65219f7187e905ff4147f35f834875475ab43f8863b8d2ee"
     else
       url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-cli-darwin-amd64"
-      sha256 "f0e406fb77063b821d7b4e57197661d796416ebde06461563e6e01d23aaa7f9d"
+      sha256 "46aec4d3b5ee085b133d608d2bcc1639262fefbc8b0b1a6d42ed2224642f985f"
     end
   end
 

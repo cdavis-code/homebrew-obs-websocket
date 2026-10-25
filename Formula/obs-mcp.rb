@@ -12,10 +12,10 @@ class ObsMcp < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-darwin-arm64"
-      sha256 "c179e03f5612e03ea6e2bf00c6ce9768a1d39c23b0ea0be470c3e4f0a1d01f2d"
+      sha256 "ba9f406e3158a1c19ae275961847f49aa5ff50f0c38fee90c5858109c7ef601a"
     else
       url "https://github.com/cdavis-code/obs_websocket_workspace/releases/download/v#{version}/obs-mcp-darwin-amd64"
-      sha256 "15cc40200bad8e8901438affa8e69a29a36e1a27a1ba5a8684c02abfd3db20ab"
+      sha256 "c90bd5925fbd13eab926ff12a75d7c9a2717ac523f6dc34fd0b6160b24ba51a2"
     end
   end
 
